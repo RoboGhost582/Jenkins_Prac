@@ -33,4 +33,3 @@ spec:
     name: api
   selector:
     app: api
-  type: LoadBalancer
