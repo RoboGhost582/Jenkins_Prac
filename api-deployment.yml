@@ -23,14 +23,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapi-service
+  name: api-service
   labels:
-    app: myapi
+    app: api
 spec:
   ports:
   - port: 4000
     protocol: TCP
-    name: myapi
+    name: api
   selector:
-    app: myapi
+    app: api
   type: LoadBalancer
