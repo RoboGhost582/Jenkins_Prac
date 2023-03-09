@@ -8,6 +8,12 @@ function App() {
       .then(res => res.json())
       .then(data => setBlogs(data))
   }, [])
+  
+  useEffect(() => {
+    fetch('http://api-service:8080')
+      .then(res => res.json())
+      .then(data => setBlogs(data))
+  }, [])
 
   return (
     <div className="App">
