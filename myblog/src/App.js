@@ -10,7 +10,7 @@ function App() {
   }, [])
   
   useEffect(() => {
-    fetch('http://api-service:8080')
+    fetch('http://api-service:4000')
       .then(res => res.json())
       .then(data => setBlogs(data))
   }, [])
