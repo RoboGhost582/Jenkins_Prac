@@ -2,20 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myblog
-  labels:
-    app: myblog
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myblog
+      component: web
   template:
     metadata:
       labels:
-        app: myblog
+        component: web
     spec:
       containers:
-      - name: myblog
+      - name: client
         image: roboghost/test1-myblog:latest
         ports:
         - containerPort: 3000
