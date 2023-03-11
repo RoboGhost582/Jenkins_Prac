@@ -5,7 +5,7 @@ function App() {
   const [blogs, setBlogs] = useState([])
   
   useEffect(() => {
-    fetch('http://server-cluster-ip-service.default.svc.cluster.local:4000/api')
+    fetch('http://server-cluster-ip-service.default.svc.cluster.local:4000/')
       .then(res => res.json())
       .then(data => setBlogs(data))
   }, [])
